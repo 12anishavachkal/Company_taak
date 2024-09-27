@@ -1,0 +1,300 @@
+Container .video-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 10px;
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 560px;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+@media (max-width: 768px) {
+  .video-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .video-wrapper {
+    max-width: 100%;
+  }
+}
+
+
+
+/* Container styling */
+.container {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-around;
+}
+
+/* Button styling */
+.button {
+  padding: 15px 35px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+/* Modal overlay (background) */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 5%;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modal content box */
+.modal-content {
+  background-color: white;
+  padding: 100px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* Wizards */
+.wizard {
+  width: 88%;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid black;
+}
+
+.wizard-tabs {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.wizard-tab {
+  flex: 1;
+  padding: 10px 15px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  border: 0.5px solid black;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.wizard-tab.active {
+  background-color: #007BFF;
+  color: white;
+}
+
+.wizard-content {
+  text-align: center;
+  width: 100%;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .button {
+    width: 100%;
+    padding: 12px 25px;
+  }
+
+  .modal-content {
+    padding: 50px;
+    width: 90%;
+  }
+
+  .wizard {
+    width: 95%;
+    padding: 15px;
+  }
+
+  .wizard-tab {
+    font-size: 14px;
+    padding: 8px 10px;
+  }
+
+  .wizard-content {
+    font-size: 16px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-links {
+    justify-content: center;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .button {
+    padding: 10px 20px;
+  }
+
+  .modal-content {
+    padding: 30px;
+  }
+
+  .wizard-tab {
+    font-size: 12px;
+  }
+}
+
+/* Footer */
+.footer {
+  background-color: #282c34;
+  padding: 20px 0;
+  text-align: center;
+  color: white;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  flex-wrap: wrap;
+}
+
+.footer-content p {
+  margin: 0;
+  font-size: 16px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 15px;
+}
+
+.footer-links a {
+  color: #61dafb;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-links {
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .footer-content p {
+    margin-bottom: 10px;
+  }
+}
+
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #fff;
+  width: 500px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #f7f7f7;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.modal-header h2 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.modal-body {
+  padding: 1rem;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0.75rem;
+  background-color: #f7f7f7;
+  border-top: 1px solid #e9ecef;
+}
+
+.button {
+  padding: 0.5rem 1rem;
+  margin: 0.25rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.modal-close {
+  background-color: #6c757d;
+  color: white;
+}
+
+.modal-save {
+  background-color: #007bff;
+  color: white;
+}
